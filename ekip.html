@@ -1,0 +1,132 @@
+<!DOCTYPE html><html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>N4ear TEAM - Ekip</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      display: flex;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+    }
+    .sidebar {
+      width: 220px;
+      background-color: #111;
+      padding: 20px 10px;
+      color: white;
+    }
+    .sidebar h2 {
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      color: #e50914;
+    }
+    .user-link {
+      display: block;
+      padding: 10px;
+      margin-bottom: 8px;
+      color: white;
+      background-color: #222;
+      text-decoration: none;
+      border-left: 4px solid transparent;
+      transition: 0.2s;
+      cursor: pointer;
+    }
+    .user-link:hover, .user-link.active {
+      background-color: #333;
+      border-left: 4px solid #e50914;
+    }
+    .content {
+      flex-grow: 1;
+      background-color: #fff;
+      color: #000;
+      padding: 40px;
+      overflow-y: auto;
+    }
+    .content h2 {
+      font-size: 2rem;
+      color: #e50914;
+    }
+    .content p {
+      margin: 15px 0;
+      line-height: 1.7;
+    }
+    .insta-button {
+      margin-top: 25px;
+      display: inline-block;
+      background-color: #e50914;
+      color: #fff;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>EKİP</h2>
+    <a class="user-link" onclick="showInfo('team')">N4ear TEAM</a>
+    <a class="user-link" onclick="showInfo('afk')">@afk.leardy</a>
+    <a class="user-link" onclick="showInfo('max0')">@n4ear.max0</a>
+    <a class="user-link" onclick="showInfo('clancy')">@clancylpython</a>
+    <a class="user-link" onclick="showInfo('b7tuxyw')">@n4ear.b7tuxyw</a>
+    <a class="user-link" onclick="showInfo('beyen')">@n4ear_beyen</a>
+    <a class="user-link" onclick="showInfo('lohan')">@n4eaer.lohan</a>
+    <a class="user-link" onclick="showInfo('syaaxnova')">@syaaxnova</a>
+  </div>
+  <div class="content" id="info">
+    <h2>N4ear TEAM</h2>
+    <p>BANNED etiketi taşıyan, yeni kurulmuş ancak zayıf değil — aksine rakipsiz ve acımasız bir yapı. Dijital müdahale, banned, takipçi operasyonları ve profil manipülasyonu gibi alanlarda yüksek etkili aksiyonlar alabilen yeni nesil bir sosyal medya gücü. Gelişimde, büyümede ve agresiflikte sınır tanımaz.</p>
+  </div>  <script>
+    const content = document.getElementById("info");
+
+    const infos = {
+      team: `
+        <h2>N4ear TEAM</h2>
+        <p>BANNED etiketi taşıyan, yeni kurulmuş ancak zayıf değil — aksine rakipsiz ve acımasız bir yapı. Dijital müdahale, banned, takipçi operasyonları ve profil manipülasyonu gibi alanlarda yüksek etkili aksiyonlar alabilen yeni nesil bir sosyal medya gücü. Gelişimde, büyümede ve agresiflikte sınır tanımaz.</p>
+      `,
+      afk: `
+        <h2>@afk.leardy</h2>
+        <p>Kurucu. Deneyimli bir sanalcı, sistemlerin altyapısını bilen, operasyonel zekası yüksek bir figür. N4ear TEAM'in teknik beyni.</p>
+        <a class="insta-button" href="https://instagram.com/afk.leardy" target="_blank">HESAP</a>
+      `,
+      max0: `
+        <h2>@n4ear.max0</h2>
+        <p>Kurucu. Dijital sistemlerde yıllanmış bilgiye sahip. N4ear operasyonlarının planlayıcısı ve içerik yöneticisi.</p>
+        <a class="insta-button" href="https://instagram.com/n4ear.max0" target="_blank">HESAP</a>
+      `,
+      clancy: `
+        <h2>@clancylpython</h2>
+        <p>Kurucu. Güvenlik ve bypass tekniklerinde güçlü. N4ear çatısında her adımı kontrollü ve hedef odaklı.</p>
+        <a class="insta-button" href="https://instagram.com/clancylpython" target="_blank">HESAP</a>
+      `,
+      b7tuxyw: `
+        <h2>@n4ear.b7tuxyw</h2>
+        <p>Yeni ama potansiyelli bir üye. Tecrübesizliğini hızla kapatıyor. Ekip için yükselen değerlerden.</p>
+        <a class="insta-button" href="https://instagram.com/n4ear.b7tuxyw" target="_blank">HESAP</a>
+      `,
+      beyen: `
+        <h2>@n4ear_beyen</h2>
+        <p>Genç ve öğrenmeye aç. Banned sistemlerine hızlı uyum gösteriyor. Ekibin yükselmesine katkı sağlıyor.</p>
+        <a class="insta-button" href="https://instagram.com/n4ear_beyen" target="_blank">HESAP</a>
+      `,
+      lohan: `
+        <h2>@n4eaer.lohan</h2>
+        <p>Sessiz ama istikrarlı. Desteği ve sadakatiyle ekip içinde sağlam bir yer edinmiş durumda.</p>
+        <a class="insta-button" href="https://instagram.com/n4eaer.lohan" target="_blank">HESAP</a>
+      `,
+      syaaxnova: `
+        <h2>@syaaxnova</h2>
+        <p>Enerjik ve hevesli. Kısa sürede içeriğe ve sisteme adapte oldu. Gelişim süreci hızlı ve etkili.</p>
+        <a class="insta-button" href="https://instagram.com/syaaxnova" target="_blank">HESAP</a>
+      `
+    };
+
+    function showInfo(key) {
+      content.innerHTML = infos[key];
+      document.querySelectorAll('.user-link').forEach(link => link.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+  </script></body>
+</html>
