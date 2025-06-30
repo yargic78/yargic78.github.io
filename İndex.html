@@ -1,65 +1,63 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>YARGIÇ</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YARGIÇ - Giriş</title>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      padding: 0;
       background-color: #000;
-      color: #fff;
       font-family: 'Bebas Neue', sans-serif;
+      color: #fff;
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
-      min-height: 100vh;
-      text-align: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      flex-direction: column;
     }
+
     h1 {
-      color: #e50914;
       font-size: 5rem;
+      color: #e50914;
       letter-spacing: 2px;
+      animation: fadeIn 2s ease-in-out forwards;
+      opacity: 0;
     }
+
     p {
+      margin-top: 20px;
       font-size: 1.2rem;
-      max-width: 600px;
-      margin: 20px auto;
-      opacity: 0.8;
+      opacity: 0.6;
+      animation: fadeIn 3s ease-in-out forwards;
     }
-    a.button {
-      display: inline-block;
+
+    a {
+      margin-top: 40px;
+      padding: 12px 24px;
       background-color: #e50914;
       color: white;
-      padding: 12px 24px;
-      border-radius: 6px;
-      font-size: 1rem;
       text-decoration: none;
-      margin-top: 20px;
+      border-radius: 5px;
+      font-size: 1rem;
       transition: 0.3s ease;
     }
-    a.button:hover {
+
+    a:hover {
       background-color: #ff1a1a;
     }
-    footer {
-      position: absolute;
-      bottom: 15px;
-      font-size: 0.8rem;
-      color: #444;
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
-
   <h1>YARGIÇ</h1>
-  <p>Sosyal medya hizmetleri: IG hesap açma/kapatma, takipçi desteği, banner tasarımı ve daha fazlası.</p>
-  
-  <a class="button" href="https://www.instagram.com/z90vp?igsh=eDkxaDVudzNtaW12" target="_blank">Instagram'a Git</a>
-
-  <footer>&copy; 2025 YARGIÇ</footer>
-
+  <p>Gücün merkezi. Sosyal medya operasyonları burada başlar.</p>
+  <a href="#anasayfa">Devam Et</a>
 </body>
-  </html>
+</html>
